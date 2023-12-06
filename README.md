@@ -20,7 +20,8 @@ Requires [Quarkus](https://quarkus.io/get-started/)
 
 ## Information
 Frontend runs on port `4200`\
-Backend runs on port `8080`
+Backend runs on port `8080`\
+[API Swagger](http://localhost:8080/q/swagger-ui/) (Quarkus must be running)
 
 
 ## Preview
