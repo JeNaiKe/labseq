@@ -1,5 +1,6 @@
 package org.labsec;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -10,10 +11,11 @@ import java.math.BigInteger;
 
 
 @Path("/labseq/")
+@ApplicationScoped
 public class LabseqResource {
 
-    static int maxN = Integer.MAX_VALUE; // Can be used to limit the input range, needs to trowh an error if;
-    static int preventOverflowStepSize = 1000;
+    static int maxN = 10000; //Integer.MAX_VALUE; // Can be used to limit the input range, needs to trowh an error if;
+    static int preventOverflowStepSize = 100;
     int maxCalculatedN = 3;
 
     static HashMap<Integer, BigInteger> labseqCacheMap; //https://quarkus.io/guides/cache
@@ -25,7 +27,7 @@ public class LabseqResource {
 
     @GET
     public String labseqGet() {
-        return "Append /{n} to the URL to get the n-th number in the Labseq sequence.";
+        return "Needs a number as a parameter.";
     }
 
     @Path("{n}")
@@ -33,7 +35,7 @@ public class LabseqResource {
     public String labseqGet(@PathParam("n") Integer n) {
         if (n < 0 || n > maxN){
             resetCache(); // experimental purpose
-            return "Positive integers only, please.";
+            return "[n => 0 <= 10000] only.";
         }
 
         // Prevent stack overflow by doing atmost preventOverflowStepSize recursive steps at a time, creating the cache.
