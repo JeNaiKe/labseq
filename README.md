@@ -24,4 +24,4 @@ Backend runs on port `8080`
 
 
 ## Preview
-![Previw Image here](images/preview.png?raw=true)
+![Previw Image here](preview.png?raw=true)
