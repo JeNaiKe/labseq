@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="container">
+    <form (submit)="onSubmit()">
+      <h2>Lab Seq</h2>
+      <label for="n">Number: </label>
+      <input type="number" id="n" #nIn>
+      <button (click)="onSubmit()">Submit</button>
+    </form>
+  <div>
+      <h3>Result: </h3> {{result}}
+  </div>
+</div>
+<div class="info">
+  Send -1 to clear the cache.
+</div>

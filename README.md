@@ -14,8 +14,7 @@ Requires [Quarkus](https://quarkus.io/get-started/)
 1. On frontend\
    1.1 Enter the <ins>frontend</ins> folder: `cd .\frontend\`\
    1.2 Install node modules: `npm install` (on first time)\
-   1.3 Enter the <ins>Angular</ins>: `cd .\labseq\`\
-   1.4 Turn on the server:  `ng serve`
+   1.3 Turn on the server:  `ng serve`
 
 
 ## Information
